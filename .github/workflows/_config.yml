@@ -1,0 +1,12 @@
+title: Hugo Storm - Security Analist of the Future
+description: Portfolio and blog of a cybersecurity student
+url: https://stormhugo.github.io
+theme: minima  
+
+# Navigation links
+header_pages:
+  - about.md
+  - certifications.md
+  - blog.md
+  - socials.md
+  - services.md
