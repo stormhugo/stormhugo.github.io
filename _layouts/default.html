@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- SEO tags -->
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="site-title">
+      </div>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}#home" class="page-link">Home</a>
+        <a href="{{ '/' | relative_url }}#about" class="page-link">About</a>
+        <a href="{{ '/' | relative_url }}#learning-path" class="page-link">Learning Path</a>
+        <a href="{{ '/' | relative_url }}#certifications" class="page-link">Certifications</a>
+        <a href="{{ '/' | relative_url }}#blog-highlight" class="page-link">Blog</a>
+        <a href="{{ '/' | relative_url }}#contact" class="page-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved. Made with GitHub Pages and Jekyll.</p>
+        <div class="footer-social">
+          {% if site.social.github %}
+          <a href="https://github.com/stormhugo" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          {% endif %}
+          {% if site.social.linkedin %}
+          <a href="https://linkedin.com/in/stormhugo" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,12 +1,48 @@
-title: Hugo Storm - Security Analist of the Future
-description: Portfolio and blog of a cybersecurity student
+# Site settings
+title: Hugo Storm
+description: Cybersecurity professional sharing expertise and insights
 url: https://stormhugo.github.io
-theme: minima  
+baseurl: ""
+author: Hugo Storm
+
+# Build settings
+theme: minima
+markdown: kramdown
+permalink: /blog/:title/
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Collections
+collections:
+  certifications:
+    output: true
 
 # Navigation links
 header_pages:
-  - about.md
-  - certifications.md
+  - index.md
   - blog.md
-  - socials.md
-  - services.md
+  - contact.md
+
+# Social media profiles
+social:
+  github: username
+  linkedin: username
+  email: hello@example.com
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - README.md
+  - LICENSE

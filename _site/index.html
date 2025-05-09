@@ -1,8 +1,59 @@
----
-layout: default
-title: Home
----
-<section id="home" class="yellow">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Hugo Storm</title>
+  <meta name="description" content="Cybersecurity professional sharing expertise and insights">
+  
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- SEO tags -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | Hugo Storm</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Home" />
+<meta name="author" content="Hugo Storm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Cybersecurity professional sharing expertise and insights" />
+<meta property="og:description" content="Cybersecurity professional sharing expertise and insights" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Hugo Storm" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Home" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Hugo Storm"},"description":"Cybersecurity professional sharing expertise and insights","headline":"Home","name":"Hugo Storm","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="site-title">
+      </div>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="site-nav">
+        <a href="/#home" class="page-link">Home</a>
+        <a href="/#about" class="page-link">About</a>
+        <a href="/#learning-path" class="page-link">Learning Path</a>
+        <a href="/#certifications" class="page-link">Certifications</a>
+        <a href="/#blog-highlight" class="page-link">Blog</a>
+        <a href="/#contact" class="page-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section id="home" class="yellow">
   <div class="container">
     <div class="hero-content">
       <h1 class="hero-title">Hugo Storm</h1>
@@ -150,30 +201,27 @@ title: Home
   <div class="container">
     <h2 class="section-title dark">Latest Articles</h2>
     <div class="blog-grid">
-      {% if site.posts.size > 0 %}
-        {% for post in site.posts limit:4 %}
+      
+        
           <div class="blog-post">
-            <span class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+            <span class="blog-date">May 8, 2025</span>
+            <h3><a href="/blog/test2/">Title of Your Blog Post</a></h3>
+            <p>A brief summary of your blog post that will appear in listings</p>
+            <a href="/blog/test2/" class="read-more">Read More</a>
           </div>
-        {% endfor %}
-      {% else %}
-        <div class="blog-placeholder">
-          <h3>Coming Soon</h3>
-          <p>I'm currently working on my first cybersecurity articles. Check back soon for posts on:</p>
-          <ul class="blog-topics">
-            <li>Network Security Analyses</li>
-            <li>Case Studies</li>
-            <li>Privacy Practices</li>
-            <li>Cybersecurity Career Advice</li>
-          </ul>
-        </div>
-      {% endif %}
+        
+          <div class="blog-post">
+            <span class="blog-date">Apr 9, 2024</span>
+            <h3><a href="/blog/test/">How I Test Test</a></h3>
+            <p>Here is a simple Test
+</p>
+            <a href="/blog/test/" class="read-more">Read More</a>
+          </div>
+        
+      
     </div>
     <div class="blog-cta">
-      <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary">View All Articles</a>
+      <a href="/blog/" class="btn btn-secondary">View All Articles</a>
     </div>
   </div>
 </section>
@@ -212,3 +260,25 @@ title: Home
     </div>
   </div>
 </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Hugo Storm. All rights reserved. Made with GitHub Pages and Jekyll.</p>
+        <div class="footer-social">
+          
+          <a href="https://github.com/stormhugo" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          
+          
+          <a href="https://linkedin.com/in/stormhugo" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
