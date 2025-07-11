@@ -2,34 +2,28 @@
 layout: default
 title: Blog
 permalink: /blog/
+custom_class: blog-page
 ---
 <section class="blog-header yellow">
   <div class="container">
     <h1 class="section-title dark">Cybersecurity Journal</h1>
-    <p class="blog-intro">Insights, tutorials, and thoughts on cybersecurity, ethical hacking, and digital privacy.</p>
+    <p class="blog-intro">Insights and thoughts on Cybersecurity, IT, Privacy or anything else I would like to talk about!</p>
   </div>
 </section>
 
-<section class="blog-content black">
+<section class="blog-content">
   <div class="container">
-    <div class="blog-toolbar">
-      <div class="blog-search">
-        <input type="text" id="blog-search-input" placeholder="Search articles...">
-        <button id="blog-search-button"><i class="fas fa-search"></i></button>
-      </div>
-    </div>
-
     {% if site.posts.size > 0 %}
     <div class="blog-container">
       <div class="blog-posts">
-        {% for post in paginator.posts %}
+        {% for post in site.posts %}
           <article class="blog-post-card">
             <div class="post-meta">
               <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
               {% if post.categories %}
                 <span class="post-categories">
                   {% for category in post.categories %}
-                    <span class="category">{{ category }}</span>
+                    <a href="{{ site.baseurl }}/blog/categories/#{{ category | slugify }}" class="category">{{ category }}</a>
                   {% endfor %}
                 </span>
               {% endif %}
@@ -41,62 +35,8 @@ permalink: /blog/
         {% endfor %}
       </div>
       
-      <aside class="blog-sidebar">
-        <div class="sidebar-section categories">
-          <h3>Categories</h3>
-          <ul>
-            {% for category in site.categories %}
-              <li><a href="/blog/categories/{{ category[0] | slugify }}">{{ category[0] }}</a> ({{ category[1].size }})</li>
-            {% endfor %}
-          </ul>
-        </div>
-        
-        <div class="sidebar-section recent-posts">
-          <h3>Recent Posts</h3>
-          <ul>
-            {% for post in site.posts limit:5 %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-        
-        <div class="sidebar-section tags">
-          <h3>Tags</h3>
-          <div class="tag-cloud">
-            {% for tag in site.tags %}
-              <a href="/blog/tags/{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
-            {% endfor %}
-          </div>
-        </div>
-      </aside>
+      {% include blog_sidebar.html %}
     </div>
-    
-    <!-- Pagination -->
-    {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-item">&laquo; Previous</a>
-      {% else %}
-        <span class="pagination-item disabled">&laquo; Previous</span>
-      {% endif %}
-      
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <span class="pagination-item active">{{ page }}</span>
-        {% elsif page == 1 %}
-          <a href="{{ '/blog/' | relative_url }}" class="pagination-item">{{ page }}</a>
-        {% else %}
-          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-item">{{ page }}</a>
-        {% endif %}
-      {% endfor %}
-      
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-item">Next &raquo;</a>
-      {% else %}
-        <span class="pagination-item disabled">Next &raquo;</span>
-      {% endif %}
-    </div>
-    {% endif %}
     
     {% else %}
     <div class="blog-coming-soon">

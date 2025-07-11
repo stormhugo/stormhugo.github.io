@@ -1,0 +1,8 @@
+<div class="sidebar-section categories">
+  <h3><a href="{{ '/blog/categories/' | relative_url }}">Categories</a></h3>
+  <ul>
+    {% for category in site.categories %}
+      <li><a href="{{ site.baseurl }}/blog/categories/#{{ category[0] | slugify }}">{{ category[0] }}</a> <span class="count">({{ category[1].size }})</span></li>
+    {% endfor %}
+  </ul>
+</div>

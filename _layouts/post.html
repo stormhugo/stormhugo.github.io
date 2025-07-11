@@ -1,0 +1,64 @@
+---
+layout: default
+custom_class: blog-page post-layout
+---
+<article class="blog-post">
+  <div class="container">
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+        
+        {% if page.categories %}
+        <div class="post-categories">
+          {% for category in page.categories %}
+            <a href="{{ site.baseurl }}/blog/categories/#{{ category | slugify }}" class="category">{{ category }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
+    
+    <div class="post-content">
+      {{ content }}
+    </div>
+    
+    <footer class="post-footer">
+      <div class="author-follow">
+        <div class="follow-message">
+          <h3>Stay Updated!</h3>
+          <p>Follow me on LinkedIn to be notified when I publish new articles!</p>
+          <div class="follow-buttons">
+            <a href="{{ '/blog/' | relative_url }}" class="back-to-blog-button">
+              <i class="fas fa-arrow-left"></i> Back to main page
+            </a>
+            <a href="https://linkedin.com/in/stormhugo" target="_blank" class="follow-button">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="post-nav">
+        <div class="post-nav-prev">
+          {% if page.previous.url %}
+          <a href="{{ page.previous.url | relative_url }}" class="post-nav-link">
+            <span class="post-nav-direction">Previous</span>
+            <span class="post-nav-title">{{ page.previous.title }}</span>
+          </a>
+          {% endif %}
+        </div>
+        
+        <div class="post-nav-next">
+          {% if page.next.url %}
+          <a href="{{ page.next.url | relative_url }}" class="post-nav-link">
+            <span class="post-nav-direction">Next</span>
+            <span class="post-nav-title">{{ page.next.title }}</span>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </footer>
+  </div>
+</article>

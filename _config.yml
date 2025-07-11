@@ -1,42 +1,46 @@
-# Site settings
+
 title: Hugo Storm
 description: Cybersecurity professional sharing expertise and insights
 url: https://stormhugo.github.io
 baseurl: ""
 author: Hugo Storm
 
-# Build settings
+
 theme: minima
 markdown: kramdown
-permalink: /blog/:title/
+permalink: /blog/:year/:month/:day/:title/
 sass:
   sass_dir: assets/css
   style: compressed
 
-# Collections
+
 collections:
   certifications:
     output: true
+  pages:
+    output: true
+    permalink: /:path/
 
-# Navigation links
+
 header_pages:
   - index.md
   - blog.md
   - contact.md
 
-# Social media profiles
-social:
-  github: username
-  linkedin: username
-  email: hello@example.com
 
-# Plugins
+social:
+  github: stormhugo
+  linkedin: stormhugo
+  email: hello@hello.com
+
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
 
-# Exclude from processing
+
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -46,3 +50,11 @@ exclude:
   - .jekyll-cache/
   - README.md
   - LICENSE
+
+
+include:
+  - categories.html
+
+
+paginate: 5
+paginate_path: "/blog/page:num/"

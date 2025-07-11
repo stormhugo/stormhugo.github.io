@@ -7,14 +7,12 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  
-  <!-- Font Awesome for icons -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- SEO tags -->
+
   {% seo %}
 </head>
-<body>
+<body{% if page.custom_class %} class="{{ page.custom_class }}"{% endif %}>
   <header class="site-header">
     <div class="nav-container">
       <div class="site-title">
@@ -26,7 +24,7 @@
       
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}#home" class="page-link">Home</a>
-        <a href="{{ '/' | relative_url }}#about" class="page-link">About</a>
+        <a href="{{ '/' | relative_url }}#about" class="page-link">About Me</a>
         <a href="{{ '/' | relative_url }}#learning-path" class="page-link">Learning Path</a>
         <a href="{{ '/' | relative_url }}#certifications" class="page-link">Certifications</a>
         <a href="{{ '/' | relative_url }}#blog-highlight" class="page-link">Blog</a>

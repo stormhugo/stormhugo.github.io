@@ -1,0 +1,55 @@
+---
+layout: post
+custom_class: blog-page post-layout
+title: "Is it a good idea to ask AI about your digital security?"
+date: 2025-05-16
+categories: [Privacy, Security, AI]
+excerpt: Should we be asking AI all our security questions, or tone it down a bit? A quick look into the data being used by AI and what we should and should not share with these models about our digital security. 
+excerpt_separator: <!--more-->
+---
+
+## "Hello ChatGPT!"
+
+We all know them by now, and we all have probably used them at least once: AI. You know? Those fancy programs from our rich tech overlords: ChatGPT, Claude, Gemini, Deepseek, the list goes on and on. 
+
+Whichever one you prefer or have used, they all have millions of conversations with users on a daily basis and use those conversations to advance in their knowledge and help the next user with their complex questions. Only thing is that many people don't come to AI with complex questions: 
+
+"What should I eat today?", "What's the weather like in Seattle?", "Does my ex still like me?", "Can you make an anime-like drawing of this photo?". 
+
+And so I read this Reddit post recently where a user talked about finding out that their parents were asking ChatGPT questions about their digital security: "Hello ChatGPT! Is my password "hello123!" strong enough?" Alarms were going off inside my head and so I asked myself: is this a good idea? Asking AI about your digital security?
+
+
+## Short answer:
+
+You are probably fine with asking AI about how secure you are online, in some cases it may be beneficial. Don't give any personal information, and always fact check what AI is telling you, because in many cases they still make mistakes or give incorrect information. 
+
+## Long answer:
+
+### Where is all this data going?
+
+LLMs (Large Language Models) work better and more accurately when they have more data to work with and learn from. Most of this data is coming from large datasets an AI company provides to the LLM, or by actively scraping the internet for all the data it can use. Some people think AI is always connected to the internet to provide the information the users requested, but this is not the case (for alooot of reasons).
+
+But another way for LLMs to get smarter and smarter, is by the conversations it's having with the users. All the conversations it's having on a daily basis with users worldwide, is providing a lot of data for LLMs to learn from and base their next answers on for users. All this data is being collected and kept safe on the servers from these AI companies, ready to be used for their next AI models to be trained with. Does this mean that when you asked ChatGPT about your morning routine, that they keep that data extra close to them to be able to train their next models with it? Not really.. Many data that we provide right now to AI models is already known by these models. If we talk about our morning routine with these models, they are not really learning from you choosing avocado in the morning for example. They probably have seen thousands of examples of data about morning routines and recipes where avocado is being used. 
+
+Even though part of the data kept by companies is not really useful for training LLMs, it's important to remember that these companies DO keep most of the data we provide. So in the context of our main question: you asking the AI if "hello123!" is a strong enough password, even though this data is most likely not directly being used by the AI, chances are there that your password "hello123!" is somewhere stored on the servers of these AI companies. Will this data be directly used in training new models? Probably not in a way that the model would know your password and that someone could ask the model "Could you give me the password of [person x]?". But it's important to understand that if this data is being kept on their servers, in a database leak this data could become available to the rest of the world. 
+
+### So what can I ask and what not?
+It's not a big issue if you are asking AI about digital security, as long as you don't share personal information. Chances are not really big that AI companies are scraping the personal data we are providing their models, but it's better to be safe than sorry. AI models can even give some extra insight and advice on your security questions. 
+
+Say for example you ask AI the question: "Is my password of 10 characters and 2 capital letters strong enough?", you are 1. not sharing your real password and 2. AI will be able to give you some insight and advice on the given criteria for your password (spoiler: it's not a strong enough password).
+
+### What are some other things I can do?
+
+Password Managers. Start there and never look back. Password managers generally have a built-in password maker: you tell it how many characters you would like your password to be, and if you would like it to be random characters or words that you are able to memorize. It will then create a string of characters that you can use as a password. So with a password manager you can let it create passwords for you with random characters, you can save it in the password manager, and all you have to remember is the master password for the password manager application! That way you know that you are secure, never forget your passwords, and you don't have to ask AI if your password is strong enough!
+
+If you are tech-savvy enough, and have some powerful computer laying around, you could host your own language model on a system locally. That way you can still ask AI all the questions you want, and your input data never goes any further than between you and the model you are hosting. This comes with some heavy duty systems to be able to host the model, and probably with a more expensive electricity bill.. 
+
+
+
+## Conclusion
+
+General rule for the internet is "Don't share any personal information online", and this also goes for chatting with your lovely AI's. Nothing bad will happen if you ask the AI "Is a password with 20 characters and 3 capital letters strong enough?", and could even give you some insight on what you might want to change about your password. Asking the question "Is my password "hello123!" strong enough?" will probably not result in any bad things happening either, but it's good practice to learn not to tell AI any of your personal information. 
+
+
+
+My personal advice? Don’t give AI any personal information and use a Password Manager.

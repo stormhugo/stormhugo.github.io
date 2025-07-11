@@ -20,8 +20,9 @@ title: Home
     <h2 class="section-title">About Me</h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>Hi! I'm Hugo! A dedicated and curious Cybersecurity Professional with expertise in Security Architecture, Networking, Coding, Privacy and Operational Systems. Through my website I want to keep developing my knowledge and share my curiosity and exepertise, so welcome!</p>
-        <p>I think we all know that the digital world means continuous learning if you want to keep up, and it is something that keeps my drive going! and regularly challenge myself with new security concepts, tools, and techniques. My goal is to contribute to a safer digital environment through education, research, and practical application of security principles.</p>
+        <p>Hi! I'm Hugo! A dedicated and curious Cybersecurity Professional (in the making) and IT nerd, with expertise in Security Architecture, Networking, Coding, Privacy and Operational Systems. Through my website I want to keep developing my knowledge and share my curiosity and exepertise with the world, so welcome!</p>
+        <p>Cyber Security == "Constant learning, and changes happening in the industry", and it's one of the things I like so much about CS, and IT in general! I love to dive into the little details and regularly learn about new security concepts, tools, and techniques. My goal is to contribute to a safer digital environment and educate myself (and the rest of the world) as much as I can.</p>
+        <p>On my website you will be able to follow along with me through my learning journey, see what I have accomplished so far and what I am working towards! I'll be also sharing some of my thoughts on various topics through my blog, may it be about Cyber Security, Privacy, or anything else I like to talk about! </p>
       </div>
       <div class="about-skills">
         <h3>My Skills</h3>
@@ -64,7 +65,7 @@ title: Home
         <div class="skill-bar">
           <span class="skill-name">Malware Analysis</span>
           <div class="skill-progress">
-            <div class="progress" data-width="15%"></div>
+            <div class="progress" data-width="25%"></div>
           </div>
         </div>
         <div class="skill-bar">
@@ -110,7 +111,7 @@ title: Home
         <div class="timeline-marker completed"></div>
         <div class="timeline-content">
           <h3>LFEL1001: Understanding the EU Cyber Resilience Act (CRA)</h3>
-          <p>Learning about the new EU CRA regulation that sets CS standards for PDEs in the EU. </p>
+          <p>Completed a course about the new EU CRA regulation that sets CS standards for PDEs in the EU. </p>
           <span class="timeline-date">2025</span>
         </div>
       </div>
@@ -120,7 +121,7 @@ title: Home
 
 <section id="certifications" class="black">
   <div class="container">
-    <h2 class="section-title">Certifications</h2>
+    <h2 class="section-title">Recent Certifications</h2>
     <div class="cert-grid">
       <div class="cert-item">
         <div class="cert-logo">GCPC</div>
@@ -151,7 +152,7 @@ title: Home
     <h2 class="section-title dark">Latest Articles</h2>
     <div class="blog-grid">
       {% if site.posts.size > 0 %}
-        {% for post in site.posts limit:4 %}
+        {% for post in site.posts limit:3 %}
           <div class="blog-post">
             <span class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</span>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -185,10 +186,11 @@ title: Home
       <div class="connect-card">
         <div class="connect-icon">
           <i class="fas fa-envelope"></i>
-        </div>
+         </div>
         <h3>Email</h3>
-        <p>For any emails:</p>
-        <a href="mailto:hello@example.com" class="connect-link">Email</a>
+        <p>For any inquiries:</p>
+        <a href="#" id="reveal-email" class="connect-link">Show Email Address</a>
+        <span id="email-display" class="email-display"></span>
       </div>
       <div class="connect-card">
         <div class="connect-icon">

@@ -1,0 +1,47 @@
+---
+layout: default
+title: Categories
+permalink: /blog/categories/
+custom_class: blog-page
+---
+
+<section class="blog-header">
+  <div class="container">
+    <h1 class="section-title dark">Categories</h1>
+    <p class="blog-intro">Browse articles by category</p>
+    
+    <div class="page-navigation">
+      <a href="{{ '/blog/' | relative_url }}" class="back-to-blog-button">
+        <i class="fas fa-arrow-left"></i> Back to main page
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-content">
+  <div class="container">
+    <div class="category-nav">
+      {% for category in site.categories %}
+        <a href="#{{ category[0] | slugify }}" class="category-nav-item">
+          {{ category[0] }} <span class="category-count">({{ category[1].size }})</span>
+        </a>
+      {% endfor %}
+    </div>
+    
+    <div class="categories-list">
+      {% for category in site.categories %}
+        <div class="category-section" id="{{ category[0] | slugify }}">
+          <h2 class="category-heading">{{ category[0] }}</h2>
+          <ul class="category-posts">
+            {% for post in category[1] %}
+              <li class="category-post-item">
+                <a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a>
+                <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
