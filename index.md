@@ -21,8 +21,8 @@ title: Home
     <div class="about-grid">
       <div class="about-text">
         <p>Hi! I'm Hugo! A dedicated and curious Cybersecurity Professional (in the making) and IT nerd, with expertise in Security Architecture, Networking, Coding, Privacy and Operational Systems. Through my website I want to keep developing my knowledge and share my curiosity and exepertise with the world, so welcome!</p>
-        <p>Cyber Security == "Constant learning, and changes happening in the industry", and it's one of the things I like so much about CS, and IT in general! I love to dive into the little details and regularly learn about new security concepts, tools, and techniques. My goal is to contribute to a safer digital environment and educate myself (and the rest of the world) as much as I can.</p>
-        <p>On my website you will be able to follow along with me through my learning journey, see what I have accomplished so far and what I am working towards! I'll be also sharing some of my thoughts on various topics through my blog, may it be about Cyber Security, Privacy, or anything else I like to talk about! </p>
+        <p>Cybersecurity == "Constant learning, and changes happening in the industry", and it's one of the things I like so much about CS, and IT in general! I love to dive into the little details and regularly learn about new security concepts, tools, and techniques. My goal is to contribute to a safer digital environment and educate myself (and the rest of the world) as much as I can.</p>
+        <p>On my website you will be able to follow along with me through my learning journey, see what I have accomplished so far and what I am working towards! I'll be also sharing some of my thoughts on various topics through my blog, may it be about Cybersecurity, Privacy, or anything else I like to talk about! </p>
       </div>
       <div class="about-skills">
         <h3>My Skills</h3>

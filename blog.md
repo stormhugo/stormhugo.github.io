@@ -7,7 +7,7 @@ custom_class: blog-page
 <section class="blog-header yellow">
   <div class="container">
     <h1 class="section-title dark">Cybersecurity Journal</h1>
-    <p class="blog-intro">Insights and thoughts on Cybersecurity, IT, Privacy or anything else I would like to talk about!</p>
+    <p class="blog-intro">Blog posts and articles about Cybersecurity, IT, Privacy or anything else I would like to talk about!</p>
   </div>
 </section>
 

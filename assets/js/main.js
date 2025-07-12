@@ -135,4 +135,51 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.display = 'none';
     });
   }
+
+  
+  const mobileWarningModal = document.getElementById('mobile-warning-modal');
+  const modalCloseBtn = document.querySelector('.modal-close-btn');
+  const modalUnderstandBtn = document.querySelector('.modal-understand-btn');
+  const hasSeenMobileWarning = localStorage.getItem('hasSeenMobileWarning');
+
+
+  function isMobileDevice() {
+    
+    return /Mobi|Android/i.test(navigator.userAgent) || (window.innerWidth <= 768);
+  }
+
+  
+  function showMobileWarningModal() {
+    if (mobileWarningModal) {
+      mobileWarningModal.style.display = 'flex'; 
+      setTimeout(() => {
+        mobileWarningModal.classList.add('show'); 
+      }, 10); 
+    }
+  }
+
+  
+  function hideMobileWarningModal() {
+    if (mobileWarningModal) {
+      mobileWarningModal.classList.remove('show'); 
+      setTimeout(() => {
+        mobileWarningModal.style.display = 'none'; 
+      }, 300); 
+      localStorage.setItem('hasSeenMobileWarning', 'true'); 
+    }
+  }
+
+  
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', hideMobileWarningModal);
+  }
+
+  if (modalUnderstandBtn) {
+    modalUnderstandBtn.addEventListener('click', hideMobileWarningModal);
+  }
+
+
+  if (isMobileDevice() && !hasSeenMobileWarning) {
+    showMobileWarningModal();
+  }
 });
